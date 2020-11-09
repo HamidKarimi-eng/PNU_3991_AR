@@ -1,12 +1,3 @@
-# PNU_3991_AR
----------
-# محمد امانعلیخانی
-- [PNU_3991_AR](https://github.com/md-akhi/PNU_3991_AR)
-- [Resume](http://md-akhi.github.io/) 
-- [SOP](http://md-akhi.github.io//SOP/)
-- [GitHub](https://github.com/md-akhi)
-------------------
-## گروه ها
+#### مراجعه به
+[ مديريت پروژه هاي نرم افزاري](https://github.com/md-akhi/PNU_3991_AR/tree/main/SoftwareProjectManagement)
 
-1. 
-     1. 
