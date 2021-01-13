@@ -1,0 +1,514 @@
+\documentclass{book}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{float}
+
+
+\title{Gechman, Marvin - Project management of large software-intensive systems _ controlling the software development process-CRC Press (2019)}
+\author{Abouhamze Fahime}
+		
+\begin{document}
+	
+\begin{multicols}{2}
+product or system. Members of the SwIPT should provide
+the following:
+\begin{itemize}
+\item
+Share a common understanding of the SwIPTs tasks,
+objectives and responsibilities.
+\item
+Provide the technical skills and expertise needed to
+accomplish the tasks and objectives.
+\item
+Collaborate internally and externally with other
+SwIPTs and relevant stakeholders.
+\item
+Provide the advocacy and representation to address all
+phases of the life cycle.
+\end{itemize}
+
+	This Guidebook assumes SwIPTs are the basic performing
+organizatin and that they have the resources and authority
+tproduce and deliver software products and execute pro-
+ceses. On very small projects the SwIPT may consist of just
+one person who is assigned all the software tasks; on very
+lrge systems the SwIPT could consist of hundreds of team
+membrs as discussed in Subsection 1.6.2. The software proj-
+eyou are managing may be composed of single SwIPT or
+muliple SwIPTs.
+
+	he Integrated Master Plan, as described in Section 8.1,
+idenifies responsibilities for the SwIPTs. The project’s con-
+trat should identify key personnel and their responsibilities
+during software planning, development, test and transition
+tdeployment. he IMP hould esignate software respon-
+sibiiies through identification of program events, planned
+acmplishmntas well as acceptance criteria for each
+miletone.
+
+	The organization of SwIPTs is normally consistent with
+the product hierarchy as efined in he Contract Work
+Breakon Structure. Primary esponsibility for each WBS ele-
+ment should be assigned to a single SwIPT. This allows SwIPTs
+tidentify clear and measurable outputs and interfaces; it
+alo facilitates he flow down f requirements to he SwIPTs.
+Olarge rojects, the wIPT would include a CSwE, proba-
+bly a Chief Software Architect, plus a large team of Software
+Devlpers, Tet Eginers anSbject Matter Experts.
+
+	At the program level, there may be an over-arching
+SwIPT led by he CSwE who eports directly o he Program
+Manager. If a program does not ave CSwE, the func-
+tions are performed by the person(s) having those responsi-
+bilities regardless of their job title. If you have a government
+contract, the Government Acquisition Team may have an
+oversight organizational structure similar to yours, and the
+SwIPT tasks may involve articipation y he overnment’s
+SwIPT members.\\
+
+\setcounter{section}{6}
+\setcounter{subsection}{5}
+\subsection{Interpersonal Communication}
+No methodology or Software Process Improvement strategy can
+overcome serious problems involving ineffective communication
+or the mismanagement of interpersonal conflicts.
+
+	Frequent and honest communication with your staff is a
+critical factor in increasing the likelihood of project success
+and the mitigation of problems. As the SPM, you should seek
+cusomer involvement and encourage end-user input in the
+developmet process to avoid misinterpretation of require-
+ments, misunderstanding of changing customer needs,
+and unrealistic expectations. Project Managers, Software
+Dveloper, end-users, customers and project sponsors need
+to communicate frequently.
+
+	Bad news resulting from these conversations may be
+to your advantage if the problems are communicated early
+eogh for you to take Corrective Actions. Also, casual
+covesatins with the customer, team members and other
+stkehors may surface a potential problem sooner than its
+apperance at formal meetings when the problem may be
+much more severe.
+
+	You have the right and obligation to criticize the work
+underway as long as it is provided in a way that is construc-
+tive, respectful and non-accusatory. Effective interpersonal
+commictin, in an intellectually honest fashion, along
+with effective team conflict management and resolution, are
+the keys to successful Software Project Management. These
+isses are discussed in more depth in Section 7.5.
+
+\section{Customer Focus}
+Without the customer, you don’t have a project!
+The “customer” as referenced in this Guidebook refers to
+thorganization responsible or the rogram’s contract includ-
+ing funding and approval of the final products. It implicitly
+iclues their representatives—such as consultants hired by
+the customer. Also, you may interface daily with the custom-
+es Project Management Office also called the “Acquisition
+Program Office.”
+
+	Even if the software-intensive project being developed is
+for internal use by another division or group in your com-
+pany, they are still your “customer” and are very likely fund-
+ig the project through inter-departmental ransfer) nd
+they deserve exactly the same treatment as an external cus-
+tomer. The importance of customer focus is also discussed
+iSubsection 7.7.2. As the Project Manager, it is self-evident
+that you must figure out how to please your customer—even if
+tey are wrong. The following short story is a personal exam-
+ple to make that point.
+
+Lessons Learned. Many years ago, when auto-
+mation was at its infancy, was the Project
+Manager of a pioneering effort to automate
+library processes. We had a well-funded project
+with a large government technical library, and I
+needed to inerface ithe somer’s library
+
+director, who was more than a bit autocratic and
+knew nothing about software development.
+At the kickoff meeting, I described the devel-
+opment plan which included requirements analy-
+sis and production of the Software Requirements
+Specification (SRS). The library director imme-
+diately objected and said there is no need for
+requirements analysis, that it is a complete waste
+of time, as all we needed to do was to “automate
+the current processes.”
+I did not object since it is not a good idea to
+argue with your customer (especially this one).
+So, this is what we did. We identified the rela-
+tively simple tasks where what needed to be done
+was clearly needed, and I assigned Programmers
+to produce the design and code for those tasks.
+In subsequent status reports that was the output
+shown to the library director so she would see
+physical progress.
+Meanwhile, quietly in the “back room,” a
+group of us worked on the system and software
+requirements resulting in an abridged version of
+the SRS. his was necessary because e eeded
+to understand exactly what we were building
+since no one had prior experience with library
+automaton at thtime.
+The bottom line is that if you have a tech-
+nically unsophisticated customer, who impedes
+your ability to follow the required processes,
+use your ingenuity to figure out ways to work-
+around these obstacles to get the job done. We
+did that in this example, and t was a very suc-
+cessful pioneering library automation imple-
+mentation, delivered on time and within the
+budget.
+
+\section{Software Classes and Categories}
+Project managers must make sure there is a mechanism in
+pacto assign the proper designation to each software entity.
+There are typically three generic classes of software in a soft-
+ware-intensive system:
+◾◾ System Critical Software (SCS) described in Subsection
+1.8.1
+◾◾ Support Software (SS) described in Subsection 1.8.2
+◾◾ Commercial Off-the-Shelf or Reuse software (C/R)
+described in Subsection 1.8.3
+Each software generic class can be further subdivided into
+categories as needed for your program, resulting in the identi-
+fication of 4–8 categories of software for a typical program.
+The number of software classes, the number of categories
+within those classes, and the names of each are not critical.
+What is important is that there must be definition of the
+category assigned to each software entity because not every soft-
+ware ntity eeds o have he full set of documentation, the full
+set of reviews, the full set of metrics, and the same level of testing.
+Assigning categories to software entities, such as the exam-
+ple categories shown in the following Tables 1.8–1.10, can
+result in major time and cost savings by eliminating unnecessary
+documents, reviews, metrics nd testing. However, the simplicity
+of this approach is deceiving since obtaining agreements from
+all stakeholders on the appropriate category to assign each soft-
+ware entity is not always simple or obvious. As the Software
+Project Manager, you must work it out and obtain concurrence.
+
+\subsection{System Critical Software}
+System Critical Software, often called Mission Critical soft-
+ware, is physically part of, dedicated to, and/or essential to full
+performance of the system. SCS can be defined as:
+System Critical Software consists of software func-
+tions that f not erformed, performed out-of-
+sequence, or performed incorrectly, may directly or
+indirectly cause the system to fail.
+System Critical Software plays a critical role in the over-
+all dependability, reliability, maintainability and availabil-
+ity of every system. SCS ay be xpanded to two software
+
+
+Table 1.8 System Critical Software Class and Category Definitions
+Class DefinitionCategoryCategory Definition
+SCS
+SYSTEM CRITICAL SOFTWARE
+All applications software used to perform real-time
+operations and non-real-time functions implicitly
+required to implement the system functions allocated
+to software.SCS-1Deliverable applications software that has a
+direct role in system operation required for
+full system functionality.
+SCS-2Firmware is software embedded in the
+deliverable hardware. Firmware is treated in
+the same way as software that executes in
+general purpose computers.
+
+
+
+Table 1.9 Support Software Class and Category Definitions
+Class DefinitionCategoryCategory Definition
+SS
+SUPPORT SOFTWARE
+Software that aids in system hardware and
+software development, integration,
+qualification, operations, test and maintenanceSS-1Software Items that play a direct role in program and
+system development including software and system
+requirements qualification and acceptance testing for
+final “sell-off.”
+SS-2Support software that is typically prototype software,
+simulation software, or performance analysis and
+modeling tools (although some of this type of
+software may be selected to be in Category SS-1).
+SS-3Non-deliverable and non-critical tools or test drivers
+that indirectly aid in the development of the other
+categories of software.
+Table 1.10 COTS/Reuse Software Class and Category Definitions
+Class DefinitionCategoryCategory Definition
+C/R
+COTS/REUSE SOFTWARE
+Non-developmental Software Items including Commercial
+Off-the-Shelf software.
+All C/R products must be treated and controlled as defined
+for the category targeted for its end use.C/R-1Non-developmental software that is
+unmodified COTS or Reused software.
+C/R-2Non-developmental software that is
+modified COTS or Reused software.(*) (A
+distinction between vendor-provided and
+internally reused software can be made if
+meaningful to your program).
+(*) Modifying vendor-provided COTS is a high-risk approach and is not recommended; however, modifying internally
+reused software can be effective since you have access to the full source code.
+
+
+categories to specifically identify firmware as shown by the
+example in Table 1.8. If it is meaningful to your program,
+the number of SCS categories can be further expanded. The
+SCS implementation rocess is described later in Subsection
+3.5.1.
+
+\subsection{Support Software}
+Support Software (SS) aids in system hardware and software
+development, test, integration, qualification and mainte-
+nance. The SS class may be composed of three Software Item
+(SI) categories, or example, SS-1, S-2 and SS-3 as defined
+in Table 1.9.
+SCS-1, SCS-2 and SS-1 software categories (but not SS-2
+or SS-3) are usually deliverable and contractually obligated.
+These three ategories ust pass through all f the develop-
+mental phases, including all of the relevant software docu-
+mentation, reviews, metrics, and testing, and are subject to
+external Software Discrepancy Reports (SDRs), also called
+problem reports, see Subsection .4.1).
+SS-2 software is used in non-operational environments
+and is normally not deliverable. Both SS-2 and SS-3 software
+categories do not go through the full software life cycle or
+receive external SDRs.
+
+In some cases, important Support Software packages
+may be contractually deliverable. For example, deliverable
+Support Software may include training software, database-
+related software, software used in automatic test equipment,
+and simulation software used for diagnostic purposes dur-
+ing the sustainment activity. The Developers must decide the
+appropriate category for all software entities in compliance
+with contractual requirements. The Software Support process
+is described in Subsection 3.8.2.
+
+\subsection{Commercial Off-the-Shelf}
+and eused Software
+COTS/Reused (C/R) software is non-developmental
+Software Items and is often referred to as third-party soft-
+ware. It includes Commercial and Government off-the-
+shelf (COTS or GOTS) software as well as reused software
+obtained from endors r nternal libraries, previously devel-
+oped, or developed y other programs, set up pecifically or
+reuse. “COTS” is a generic term and does not realistically
+mean you can go to a store and buy it off-the-shelf. The C/R
+class may be composed of two categories as described by the
+example n able 1.10 r dditional categories if eaningful
+to your project.
+
+\subsection{Software Category Features}
+A single SI may consist of different classes and/or categories.
+In that event, each part of the SI must be compliant with the
+documentation, review and testing requirements of the cate-
+gory assigned to it. All software releases must be configuration
+controlled in a Software Development Library (SDL) at the
+subsystem level or by the Master Software Development Library
+(MSDL) at the program level as described in Section 9.3.
+If we view the categories as hierarchical levels, SCS is
+the top level, SS is the middle level and C/R the lowest level.
+Software cannot be moved up or “promoted” to a higher cat-
+egory level without additional development and testing. To
+achieve a higher category level, the software must be “re-engi-
+neered” and conform to the documentation, review and testing
+requirements imposed on the igher category level. All COTS
+and reused products must be treated and controlled as defined
+for the category targeted for its end se. COTS software is also
+discussed with Software Sustainment in Chapter 16.
+
+\subsection{Software Development}
+Standards and Regulations
+Applicable software standards and practices must be
+addressed in the SDP, or other documents such as a oftware
+Standards and Practices Manual. That documentation should
+identify the programming language standards to be used
+including specific ersions, a ist of pplicable standards dic-
+tated by the customer, toolsets to be used, operational details
+of the program’s defined software process, use of COTS/
+Reuse software, the process for waivers or deviations, and
+portions of the applicable standards that need to be modified
+for your project.
+These standards ensure that Developers produce con-
+sistent software development products. Standards also help
+ensure he similarity of the structure of all code/design units
+so that lines of code counts and software measurements can
+be applied consistently. Standards must provide value added
+to your project.
+Software tandards are discussed or referred to in many
+sections of this Guidebook, they are addressed in Section
+4.5, and some common standards are listed in Appendix I.
+Standards are adjustable to your needs, but regulations are
+not; hey must be followed. egulations re imposed by
+government bodies, and if you don’t comply with them you
+could be fined or even face imprisonment. For example:
+
+
+◾◾ Health Insurance Portability and Accountability Act
+(HIPPA).
+◾◾ Occupational Safety and Health Administration
+(OSHA) requires all organizations to provide for the
+protection and safety of all of your employees.
+
+◾◾ Sarbanes-Oxley Compliance (SOX) Act of 2002 affects
+all publicly held corporations.
+In addition to government regulations, there are all kinds
+of industry-specific regulations and laws that your project,
+and your company, must adhere to. As the Software Project
+Manager, you need to be aware of the mandatory regula-
+tions, and those that can or may affect your project, and
+incorporate provisions for these concerns into your SDP and
+other planning documents.
+
+\section{Why Software-Intensive}
+Systems Fail and Overrun
+The Standish Group has been periodically publishing their
+well-known CHAOS eport Standish Group, 2016) con-
+taining software project success/failure/challenged rates start-
+ing in 1994. They have lso ttempted o nalyze success
+factors at each publication. The rating of the top success fac-
+tors change ith each eport. owever the perennial major
+factors needed for project success appear to be:
+
+◾◾
+◾◾
+◾◾
+◾◾Executive management support (sponsorship)
+Customer (user) involvement
+Clear Objectives and requirements
+Optimizing scope with horter roject milestone dura-
+tions (part of planning)
+◾◾ Skilled staff
+◾◾ Project Manager expertise
+This means the absence of those factors are reasons for
+failure. The past few CHAOS reports have found a decrease
+in IT project uccess rates nd n increase in IT project fail-
+ue rates where:
+◾◾ 32% to 35% were considered successful projects as they
+were ompleted on time, on udget nd with the
+required features and functions (the Standish defini-
+tion of success).
+◾◾ 19% to 24% f the projects were considered failures
+because hey were cancelled before they were om-
+pleted, or they were delivered but never used.
+◾◾ 44% to 46% were considered challenged meaning they
+were either finished late, over budget, or with fewer
+than the equired eatures nd functions.
+If the data is accurate, based on their definition of suc-
+cess, 65% to 68% of the IT oftware rojects were not suc
+cessful. Software tools provided by the project management
+industry is estimated to be over $3 billion annually and pre-
+dicted to boom to over $5 billion in a few years, but these
+
+new methodologies and software management packages
+don’t seem to have any impact. Maybe the real solution is to
+create better Software Project Managers (achievable if they
+read this Guidebook!). Some serious researchers point out
+problems with the CHAOS reports, most notably:
+◾◾ Unlike published academic research, the data needed
+to evaluate the claims is kept private so their data or
+methods cannot be independently verified.
+◾◾ Their definition of success is narrow; success means
+cost, time and content were accurately estimated up
+front; if the project did not meet those estimates, it was
+categorized as challenged. In the real world, successful
+projects usually undergo changes as they are developed,
+and they may take longer to incorporate new function-
+ality not initially planned for, and the resulting project
+may indeed be successful.
+Popular, and often quoted, reports that contain question-
+able data is not new phenomenon as described by a personal
+experience below.
+
+Lessons Learned. The cost department at a
+company I orked for decided o find out what
+it cost to develop software. They sent out a ques-
+tionnaire to a large number of completed soft-
+ware-intensive programs, and one key question
+asked or he ost of the oftware portion of their
+program. Their final report was very professional
+and thorough, and it was referenced widely in
+the industry.
+The big mistake made by the cost depart-
+ment was the Cost Analysis Team that prepared
+the report did not have any Software Engineers
+either on the team or used as a consultant. As a
+result, the key question about software cost did
+not identify the scope of what to include in the
+cost figures. ome programs surveyed considered
+all the equirements analysis and integration
+tasks to be part of Systems Engineering and did
+not count it as a software cost. Some programs
+charge Software Quality Assurance (SQA) and
+Software Configuration Management (SCM) to
+those departments. Other programs onsider all
+of those tasks part of the software effort. Since the
+data collected had no consistency in scope, the
+well documented cost results were meaningless.
+
+
+Table 1.11 Core Success Factors for Software-Intensive
+System Implementations
+1. Obtain Senior Management Commitment to Your
+Project
+2. Define and Document Your Customer’s System and
+Software Requirements
+3. Prepare and Follow a Software Development Plan and
+a Defined Process
+4. Prepare and Follow a Work Breakdown Structure
+5. Hire the Best Programmers and Support Staff
+Available and Provide Training
+6. Select and Document a Clear Software Development
+Methodology
+7. Take a Big Picture Systems Approach
+8. Measure and Track Quality, Performance and Progress
+9. Build Quality Into Software from the Start of the Life
+Cycle
+10. Identify, Manage and Mitigate Software Risks
+11. If You Change Anything When Developing a Complex
+System: Retest
+12. Prepare Software Documentation as Needed by Your
+Project
+13. Provide Configuration Management of the Work
+Products
+14. Don’t Make Decisions Based Only on Budget or
+Schedule Issues
+15. Collaborate With Hardware and System Engineers
+16. Use Software Standards Where Applicable
+17. Document Lessons Learned to Facilitate Process
+Improvement
+18. Lead, Motivate and Manage Effectively and Ethically
+19. Keep Solutions Simple and Concise and Avoid Gold
+Plating
+20. Do Not Concur With Unrealistic Schedules or
+Budgets
+21. Don’t Take Risky Shortcuts
+22. Always Use Common Sense
+
+Core Success Factors. Why do software-intensive projects
+fail, or result in severe cost overruns, or are delivered well
+beyond the planned completion date? The principal answer
+is: they do not follow all of the core success factors needed for
+successful software-intensive system implementations. My
+list of the core uccess factors in able 1.11 re not listed
+in order of importance. They are all important. I am sure
+you can add more to the list, but these are the ssential ele-
+ments for successful development and deployment of large
+software-intensive systems. Memorize this list of 22 success
+factors or ape it to he wall near our desk.
+ 
+\end{multicols}
+\end{document}		
+		
+	    
+		
+		
