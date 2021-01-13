@@ -7,7 +7,7 @@
 - [Certificates](http://md-akhi.github.io//Certificates/)
 - [GitHub](https://github.com/md-akhi)
 
-- [Latex](https://github.com/md-akhi/PNU_3991_AR/Latex)
+- [Latex](https://github.com/md-akhi/PNU_3991_AR/tree/main/Latex)
 ------------------
 ## گروه ها
 
