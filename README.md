@@ -3,11 +3,23 @@
 # محمد امانعلیخانی
 - [PNU_3991_AR](https://github.com/md-akhi/PNU_3991_AR)
 - [Resume](http://md-akhi.github.io/) 
-- [SOP](http://md-akhi.github.io//SOP/)
-- [Certificates](http://md-akhi.github.io//Certificates/)
+- [SOP](http://md-akhi.github.io/SOP/)
+- [Certificates](http://md-akhi.github.io/Certificates/)
 - [GitHub](https://github.com/md-akhi)
 
-- [Latex](https://github.com/md-akhi/PNU_3991_AR/tree/main/Latex)
+- [Latex](https://github.com/md-akhi/PNU_3991_AR/blob/main/SoftwareProjectManagement/Latex)
+
+------------------
+> ارزیابی ها
+
+##  بخش عمومی
+- [ارزیابی رزومه و انگیزه نامه](https://github.com/md-akhi/PNU_3991_AR/blob/main/_General/04.MA_CV_CheckList_AR_3991.pdf)
+- [خلاصه ارزیابی بخش عمومی](https://github.com/md-akhi/PNU_3991_AR/blob/main/_General/04.MA_GeneralSection_CheckList_AR_3991.pdf)
+
+##  بخش دروس ارشد
+- [خلاصه ارزیابی درس_مدیریت پروژه نرم افزار](https://github.com/md-akhi/PNU_3991_AR/blob/main/SoftwareProjectManagement/04.MA_SoftwareProjectManagement_CheckList_AR_3991.pdf)
+- [خلاصه ارزیابی درس_سمینار]()
+
 ------------------
 ## گروه ها
 
