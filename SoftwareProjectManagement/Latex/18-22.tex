@@ -1,33 +1,32 @@
 \documentclass{book}
 \usepackage{multicol}
-\usepackage{graphicx}
-\usepackage{multicol}
+\usepackage{multirow}
 \usepackage{geometry}
-\usepackage{array}
-\usepackage{float}
+\usepackage{amssymb}
 
 
 \title{Gechman, Marvin - Project management of large software-intensive systems _ controlling the software development process-CRC Press (2019)}
 \author{Abouhamze Fahime}
 		
 \begin{document}
-	
+\chapter{}
 \begin{multicols}{2}
 product or system. Members of the SwIPT should provide
 the following:
 \begin{itemize}
-\item
-Share a common understanding of the SwIPTs tasks,
-objectives and responsibilities.
-\item
-Provide the technical skills and expertise needed to
-accomplish the tasks and objectives.
-\item
-Collaborate internally and externally with other
-SwIPTs and relevant stakeholders.
-\item
-Provide the advocacy and representation to address all
-phases of the life cycle.
+	\renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+	\item
+	Share a common understanding of the SwIPTs tasks,
+	objectives and responsibilities.
+	\item
+	Provide the technical skills and expertise needed to
+	accomplish the tasks and objectives.
+	\item
+	Collaborate internally and externally with other
+	SwIPTs and relevant stakeholders.
+	\item
+	Provide the advocacy and representation to address all
+	phases of the life cycle.
 \end{itemize}
 
 	This Guidebook assumes SwIPTs are the basic performing
@@ -171,11 +170,14 @@ Project managers must make sure there is a mechanism in
 pacto assign the proper designation to each software entity.
 There are typically three generic classes of software in a soft-
 ware-intensive system:
-◾◾ System Critical Software (SCS) described in Subsection
-1.8.1
-◾◾ Support Software (SS) described in Subsection 1.8.2
-◾◾ Commercial Off-the-Shelf or Reuse software (C/R)
-described in Subsection 1.8.3
+\begin{itemize}
+	\renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+	\item System Critical Software (SCS) described in Subsection
+	1.8.1
+	\item Support Software (SS) described in Subsection 1.8.2
+	\item Commercial Off-the-Shelf or Reuse software (C/R)
+	described in Subsection 1.8.3
+\end{itemize}
 Each software generic class can be further subdivided into
 categories as needed for your program, resulting in the identi-
 fication of 4–8 categories of software for a typical program.
@@ -205,60 +207,75 @@ indirectly cause the system to fail.
 System Critical Software plays a critical role in the over-
 all dependability, reliability, maintainability and availabil-
 ity of every system. SCS ay be xpanded to two software
+\end{multicols}
 
+\setcounter{table}{7}
+\begin{table}
+	\caption{System Critical Software Class and Category Definitions}
+	\begin{tabular}[m]{|l|l|l|}
+		\hline
+		\textbf{Class Definition} & \textbf{Category} & \textbf{Category Definition} \\ 
+		\multirow{2}{*}{SYSTEM CRITICAL SOFTWARE All applications software used to perform real-time operations and non-real-time functions implicitly required to implement the system functions allocated to software.} 
+		& SCS-1 
+		& Deliverable applications software that has a direct role in system operation required for full system functionality. \\
+		& SCS-2 
+		& Firmware is software embedded in the deliverable hardware. Firmware is treated in the same way as software that executes in general purpose computers. \\
+	\end{tabular}
+\end{table}
 
-Table 1.8 System Critical Software Class and Category Definitions
-Class DefinitionCategoryCategory Definition
-SCS
-SYSTEM CRITICAL SOFTWARE
-All applications software used to perform real-time
-operations and non-real-time functions implicitly
-required to implement the system functions allocated
-to software.SCS-1Deliverable applications software that has a
-direct role in system operation required for
-full system functionality.
-SCS-2Firmware is software embedded in the
-deliverable hardware. Firmware is treated in
-the same way as software that executes in
-general purpose computers.
+\begin{table}
+	\caption{Support Software Class and Category Definitions}
+	\begin{tabular}[m]{|l|l|l|}
+		Class Definition & Category & Category Definition\\
+		\multirow{3}{*}{SS
+			SUPPORT SOFTWARE
+			Software that aids in system hardware and
+			software development, integration,
+			qualification, operations, test and maintenance}
+		& SS-1
+		& Software Items that play a direct role in program and
+		system development including software and system
+		requirements qualification and acceptance testing for
+		final “sell-off.” \\
+		& SS-2
+		& Support software that is typically prototype software,
+		simulation software, or performance analysis and
+		modeling tools (although some of this type of
+		software may be selected to be in Category SS-1).\\
+		& SS-3
+		& Non-deliverable and non-critical tools or test drivers
+		that indirectly aid in the development of the other
+		categories of software. \\
+	\end{tabular}
+\end{table}
 
+\begin{table}
+	\caption{COTS/Reuse Software Class and Category Definitions}
+	\begin{tabular}[m]{|l|l|l|}
+		Class Definition & Category & Category Definition \\
+		\multirow{2}{*}{C/R
+			COTS/REUSE SOFTWARE
+			Non-developmental Software Items including Commercial
+			Off-the-Shelf software.
+			All C/R products must be treated and controlled as defined
+			for the category targeted for its end use.}
+		& C/R-1
+		Non-developmental software that is
+		unmodified COTS or Reused software. \\
+		& C/R-2
+		& Non-developmental software that is
+		modified COTS or Reused software.(*) (A
+		distinction between vendor-provided and
+		internally reused software can be made if
+		meaningful to your program). \\
+	\end{tabular}
+\end{table}
 
-
-Table 1.9 Support Software Class and Category Definitions
-Class DefinitionCategoryCategory Definition
-SS
-SUPPORT SOFTWARE
-Software that aids in system hardware and
-software development, integration,
-qualification, operations, test and maintenanceSS-1Software Items that play a direct role in program and
-system development including software and system
-requirements qualification and acceptance testing for
-final “sell-off.”
-SS-2Support software that is typically prototype software,
-simulation software, or performance analysis and
-modeling tools (although some of this type of
-software may be selected to be in Category SS-1).
-SS-3Non-deliverable and non-critical tools or test drivers
-that indirectly aid in the development of the other
-categories of software.
-Table 1.10 COTS/Reuse Software Class and Category Definitions
-Class DefinitionCategoryCategory Definition
-C/R
-COTS/REUSE SOFTWARE
-Non-developmental Software Items including Commercial
-Off-the-Shelf software.
-All C/R products must be treated and controlled as defined
-for the category targeted for its end use.C/R-1Non-developmental software that is
-unmodified COTS or Reused software.
-C/R-2Non-developmental software that is
-modified COTS or Reused software.(*) (A
-distinction between vendor-provided and
-internally reused software can be made if
-meaningful to your program).
 (*) Modifying vendor-provided COTS is a high-risk approach and is not recommended; however, modifying internally
 reused software can be effective since you have access to the full source code.
 
-
+\begin{multicols}{2}
+	
 categories to specifically identify firmware as shown by the
 example in Table 1.8. If it is meaningful to your program,
 the number of SCS categories can be further expanded. The
@@ -352,15 +369,17 @@ not; hey must be followed. egulations re imposed by
 government bodies, and if you don’t comply with them you
 could be fined or even face imprisonment. For example:
 
+\begin{itemize}
+	\renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+	\item Health Insurance Portability and Accountability Act
+	(HIPPA).
+	\item Occupational Safety and Health Administration
+	(OSHA) requires all organizations to provide for the
+	protection and safety of all of your employees.
+	\item Sarbanes-Oxley Compliance (SOX) Act of 2002 affects
+	all publicly held corporations.
+\end{itemize}
 
-◾◾ Health Insurance Portability and Accountability Act
-(HIPPA).
-◾◾ Occupational Safety and Health Administration
-(OSHA) requires all organizations to provide for the
-protection and safety of all of your employees.
-
-◾◾ Sarbanes-Oxley Compliance (SOX) Act of 2002 affects
-all publicly held corporations.
 In addition to government regulations, there are all kinds
 of industry-specific regulations and laws that your project,
 and your company, must adhere to. As the Software Project
@@ -379,57 +398,66 @@ factors at each publication. The rating of the top success fac-
 tors change ith each eport. owever the perennial major
 factors needed for project success appear to be:
 
-◾◾
-◾◾
-◾◾
-◾◾Executive management support (sponsorship)
-Customer (user) involvement
-Clear Objectives and requirements
-Optimizing scope with horter roject milestone dura-
-tions (part of planning)
-◾◾ Skilled staff
-◾◾ Project Manager expertise
+\begin{itemize}
+	\renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+	\item Executive management support (sponsorship)
+	\item Customer (user) involvement
+	\item Clear Objectives and requirements
+	\item Optimizing scope with horter roject milestone dura-
+	tions (part of planning)
+	\item Skilled staff
+	\item Project Manager expertise
+\end{itemize}
+
 This means the absence of those factors are reasons for
 failure. The past few CHAOS reports have found a decrease
 in IT project uccess rates nd n increase in IT project fail-
 ue rates where:
-◾◾ 32% to 35% were considered successful projects as they
-were ompleted on time, on udget nd with the
-required features and functions (the Standish defini-
-tion of success).
-◾◾ 19% to 24% f the projects were considered failures
-because hey were cancelled before they were om-
-pleted, or they were delivered but never used.
-◾◾ 44% to 46% were considered challenged meaning they
-were either finished late, over budget, or with fewer
-than the equired eatures nd functions.
+\begin{itemize}
+	\renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+	\item 32\% to 35\% were considered successful projects as they
+	were ompleted on time, on udget nd with the
+	required features and functions (the Standish defini-
+	tion of success).
+	\item 19\% to 24\% f the projects were considered failures
+	because hey were cancelled before they were om-
+	pleted, or they were delivered but never used.
+	\item 44\% to 46\% were considered challenged meaning they
+	were either finished late, over budget, or with fewer
+	than the equired eatures nd functions.
+\end{itemize}
+
 If the data is accurate, based on their definition of suc-
-cess, 65% to 68% of the IT oftware rojects were not suc
+cess, 65\% to 68\% of the IT oftware rojects were not suc
 cessful. Software tools provided by the project management
-industry is estimated to be over $3 billion annually and pre-
-dicted to boom to over $5 billion in a few years, but these
+industry is estimated to be over \$3 billion annually and pre-
+dicted to boom to over \$5 billion in a few years, but these
 
 new methodologies and software management packages
 don’t seem to have any impact. Maybe the real solution is to
 create better Software Project Managers (achievable if they
 read this Guidebook!). Some serious researchers point out
 problems with the CHAOS reports, most notably:
-◾◾ Unlike published academic research, the data needed
-to evaluate the claims is kept private so their data or
-methods cannot be independently verified.
-◾◾ Their definition of success is narrow; success means
-cost, time and content were accurately estimated up
-front; if the project did not meet those estimates, it was
-categorized as challenged. In the real world, successful
-projects usually undergo changes as they are developed,
-and they may take longer to incorporate new function-
-ality not initially planned for, and the resulting project
-may indeed be successful.
+\begin{itemize}
+	\renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+	\item Unlike published academic research, the data needed
+	to evaluate the claims is kept private so their data or
+	methods cannot be independently verified.
+	\item Their definition of success is narrow; success means
+	cost, time and content were accurately estimated up
+	front; if the project did not meet those estimates, it was
+	categorized as challenged. In the real world, successful
+	projects usually undergo changes as they are developed,
+	and they may take longer to incorporate new function-
+	ality not initially planned for, and the resulting project
+	may indeed be successful.
+\end{itemize}
+
 Popular, and often quoted, reports that contain question-
 able data is not new phenomenon as described by a personal
 experience below.
 
-Lessons Learned. The cost department at a
+\textbf{Lessons Learned.} The cost department at a
 company I orked for decided o find out what
 it cost to develop software. They sent out a ques-
 tionnaire to a large number of completed soft-
@@ -455,44 +483,34 @@ of those tasks part of the software effort. Since the
 data collected had no consistency in scope, the
 well documented cost results were meaningless.
 
-
-Table 1.11 Core Success Factors for Software-Intensive
-System Implementations
-1. Obtain Senior Management Commitment to Your
-Project
-2. Define and Document Your Customer’s System and
-Software Requirements
-3. Prepare and Follow a Software Development Plan and
-a Defined Process
-4. Prepare and Follow a Work Breakdown Structure
-5. Hire the Best Programmers and Support Staff
-Available and Provide Training
-6. Select and Document a Clear Software Development
-Methodology
-7. Take a Big Picture Systems Approach
-8. Measure and Track Quality, Performance and Progress
-9. Build Quality Into Software from the Start of the Life
-Cycle
-10. Identify, Manage and Mitigate Software Risks
-11. If You Change Anything When Developing a Complex
-System: Retest
-12. Prepare Software Documentation as Needed by Your
-Project
-13. Provide Configuration Management of the Work
-Products
-14. Don’t Make Decisions Based Only on Budget or
-Schedule Issues
-15. Collaborate With Hardware and System Engineers
-16. Use Software Standards Where Applicable
-17. Document Lessons Learned to Facilitate Process
-Improvement
-18. Lead, Motivate and Manage Effectively and Ethically
-19. Keep Solutions Simple and Concise and Avoid Gold
-Plating
-20. Do Not Concur With Unrealistic Schedules or
-Budgets
-21. Don’t Take Risky Shortcuts
-22. Always Use Common Sense
+\begin{table}
+	\caption{Core Success Factors for Software-Intensive
+		System Implementations}
+	\begin{enumerate}
+		\item Obtain Senior Management Commitment to Your Project
+		\item  Define and Document Your Customer’s System and Software Requirements
+		\item  Prepare and Follow a Software Development Plan and a Defined Process
+		\item Prepare and Follow a Work Breakdown Structure
+		\item Hire the Best Programmers and Support Staff Available and Provide Training
+		\item Select and Document a Clear Software Development Methodology
+		\item Take a Big Picture Systems Approach
+		\item Measure and Track Quality, Performance and Progress
+		\item Build Quality Into Software from the Start of the Life Cycle
+		\item Identify, Manage and Mitigate Software Risks
+		\item If You Change Anything When Developing a Complex System: Retest
+		\item Prepare Software Documentation as Needed by Your Project
+		\item Provide Configuration Management of the Work Products
+		\item Don’t Make Decisions Based Only on Budget or Schedule Issues
+		\item Collaborate With Hardware and System Engineers
+		\item Use Software Standards Where Applicable
+		\item Document Lessons Learned to Facilitate Process Improvement
+		\item Lead, Motivate and Manage Effectively and Ethically
+		\item Keep Solutions Simple and Concise and Avoid Gold Plating
+		\item Do Not Concur With Unrealistic Schedules or Budgets
+		\item Don’t Take Risky Shortcuts
+		\item Always Use Common Sense
+	\end{enumerate}
+\end{table}
 
 Core Success Factors. Why do software-intensive projects
 fail, or result in severe cost overruns, or are delivered well
